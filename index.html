@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadhil's Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ───────────────────────── HEADER ───────────────────────── -->
+  <header class="top-bar">
+    <span id="clock" class="clock"></span>
+    <button id="themeToggle" class="btn-icon" title="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <!-- ───────────────────────── GREETING ─────────────────────── -->
+  <section class="card greeting-card">
+    <h1 id="greeting" class="greeting-text"></h1>
+    <p id="date-display" class="date-text"></p>
+    <div class="name-row">
+      <input id="nameInput" class="name-input" type="text" placeholder="Enter your name…" maxlength="30" />
+      <button id="saveName" class="btn btn-primary">Save</button>
+    </div>
+  </section>
+
+  <!-- ──────────────────────── FOCUS TIMER ────────────────────── -->
+  <section class="card timer-card">
+    <h2 class="section-title">Focus Timer</h2>
+
+    <div class="pomodoro-settings">
+      <label for="pomodoroMinutes">Minutes:</label>
+      <input id="pomodoroMinutes" class="pomodoro-input" type="number" min="1" max="120" value="25" />
+      <button id="applyPomodoro" class="btn btn-secondary">Apply</button>
+    </div>
+
+    <div id="timerDisplay" class="timer-display">25:00</div>
+
+    <div class="timer-controls">
+      <button id="startTimer" class="btn btn-primary">Start</button>
+      <button id="stopTimer"  class="btn btn-secondary">Stop</button>
+      <button id="resetTimer" class="btn btn-danger">Reset</button>
+    </div>
+  </section>
+
+  <!-- ──────────────────────── TO-DO LIST ─────────────────────── -->
+  <section class="card todo-card">
+    <h2 class="section-title">To-Do List</h2>
+
+    <div class="todo-add-row">
+      <input id="taskInput" class="task-input" type="text" placeholder="New task…" maxlength="100" />
+      <button id="addTask" class="btn btn-primary">Add</button>
+    </div>
+
+    <div class="todo-controls">
+      <button id="sortAZ"   class="btn btn-small">Sort A–Z</button>
+      <button id="sortZA"   class="btn btn-small">Sort Z–A</button>
+      <button id="sortDone" class="btn btn-small">Done Last</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+  </section>
+
+  <!-- ──────────────────────── QUICK LINKS ────────────────────── -->
+  <section class="card links-card">
+    <h2 class="section-title">Quick Links</h2>
+
+    <div class="link-add-row">
+      <input id="linkName" class="link-input" type="text"  placeholder="Label…"  maxlength="30" />
+      <input id="linkURL"  class="link-input" type="url"   placeholder="https://…" />
+      <button id="addLink" class="btn btn-primary">Add</button>
+    </div>
+
+    <div id="linkGrid" class="link-grid"></div>
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
